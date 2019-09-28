@@ -1,6 +1,6 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
-  version = "1.53.0"
+  version = "2.15.0"
 
   name = "${data.terraform_remote_state.common.project_name}-${data.terraform_remote_state.common.environment}"
   cidr = "${data.terraform_remote_state.common.vpc_cidr_block}"

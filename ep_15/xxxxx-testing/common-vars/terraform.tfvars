@@ -3,8 +3,8 @@ environment = "testing"
 
 vpc_cidr_block = "192.168.0.0/16"
 
-region = "eu-west-1"
-vpc_azs = ["eu-west-1a","eu-west-1b","eu-west-1c"]
+region = "us-west-2"
+vpc_azs = ["us-west-2a", "us-west-2b", "us-west-2c"]
 
 vpc_public_subnet_cidrs = [
 	"192.168.10.0/24",
