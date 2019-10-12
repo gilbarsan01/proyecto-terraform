@@ -10,7 +10,7 @@ crash.log
 
 
 # provider files
-#provider.tf*
+provider.tf*
 
 # Key public
-#keypair.tf*
+keypair.tf*

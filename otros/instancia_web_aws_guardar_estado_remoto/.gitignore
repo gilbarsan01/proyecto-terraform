@@ -7,10 +7,3 @@
 
 # Crash log files
 crash.log
-
-
-# provider files
-#provider.tf*
-
-# Key public
-#keypair.tf*
