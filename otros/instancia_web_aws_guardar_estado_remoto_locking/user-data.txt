@@ -1,6 +1,0 @@
-#!/bin/bash
-yum  update
-yum -y install httpd
-
-echo 'Hola mundo' | sudo tee /var/www/html/index.html
-sudo service httpd start

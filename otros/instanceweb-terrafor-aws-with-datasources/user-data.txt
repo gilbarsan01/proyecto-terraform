@@ -1,6 +1,0 @@
-#!/bin/bash
-apt-get update
-apt-get install -y apache2
-
-echo 'Hola mundo' | sudo tee /var/www/html/index.html
-systemctl start apache2.service
