@@ -13,4 +13,4 @@ crash.log
 #provider.tf*
 
 # Key public
-#keypair.tf*
+keypair.tf*
