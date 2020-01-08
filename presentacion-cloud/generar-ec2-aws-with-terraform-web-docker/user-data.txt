@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#Actualizacion de SO.
+yum update -y
+
+
+#instalacion de Docker , git
+amazon-linux-extras install docker -y
+yum install git -y
+
+#Configuracion de Docker
+service docker start
+usermod -a -G docker ec2-user
+chmod 666 /var/run/docker.sock
+
+
+
+#Clonado de proyecto git
+cd /home/ec2-user/
+git clone https://github.com/gilbarsan01/proyecto-docker.git
+
+
+#Acceder al proyecto
+cd proyecto-docker/Dockerfiles/nginx-holamundo
+
+
+#Generar imagen del ~/Dockerfile
+docker build -t mynginx:1.1 .
+
+#Ejecutar Docker (--name nombre_contenedor -p PuertoAnfritrion:PuertoContenedor -d ImagenGenerada):
+docker run --name mynginx2 -p 80:80 -d mynginx:1.1
+
+
