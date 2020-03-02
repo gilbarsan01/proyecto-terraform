@@ -1,0 +1,8 @@
+#!/bin/bash
+apt-get update
+apt-get install -y apache2 stress
+systemctl start apache2.service
+
+instance_id=$(curl -s 169.254.169.254/latest/meta-data/instance-id)
+
+echo "Servicio desde la instancia: $instance_id " | sudo tee /var/www/html/index.html
