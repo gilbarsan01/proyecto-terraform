@@ -1,0 +1,7 @@
+#!/bin/bash
+yum  update
+yum -y install httpd
+
+cd /var/www/html/ ; wget https://www.utsem-morelos.edu.mx/
+
+sudo service httpd start
